@@ -5,34 +5,74 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   return (
-    <Box maxW="xl" mx="auto" mt={10} p={6} boxShadow="lg" borderRadius="md" bg="gray.50">
+    <Box
+      maxW="xl"
+      mx="auto"
+      mt={10}
+      p={6}
+      boxShadow="lg"
+      borderRadius="md"
+      bg="gray.50"
+    >
       <Heading as="h1" size="xl" textAlign="center" color="teal.600" mb={6}>
         React Hooks Demo
       </Heading>
 
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
-        <Button colorScheme="teal" size="lg" onClick={() => navigate("/use-state")}>
+        <Button
+          colorScheme="teal"
+          size="lg"
+          onClick={() => navigate("/use-state")}
+        >
           useState
         </Button>
-        <Button colorScheme="teal" size="lg" onClick={() => navigate("/use-effect")}>
+        <Button
+          colorScheme="teal"
+          size="lg"
+          onClick={() => navigate("/use-effect")}
+        >
           useEffect
         </Button>
-        <Button colorScheme="teal" size="lg" onClick={() => navigate("/use-reducer")}>
+        <Button
+          colorScheme="teal"
+          size="lg"
+          onClick={() => navigate("/use-reducer")}
+        >
           useReducer
         </Button>
-        <Button colorScheme="teal" size="lg" onClick={() => navigate("/use-context")}>
+        <Button
+          colorScheme="teal"
+          size="lg"
+          onClick={() => navigate("/use-context")}
+        >
           useContext
         </Button>
-        <Button colorScheme="teal" size="lg" onClick={() => navigate("/use-ref")}>
+        <Button
+          colorScheme="teal"
+          size="lg"
+          onClick={() => navigate("/use-ref")}
+        >
           useRef
         </Button>
-        <Button colorScheme="teal" size="lg" onClick={() => navigate("/use-memo")}>
+        <Button
+          colorScheme="teal"
+          size="lg"
+          onClick={() => navigate("/use-memo")}
+        >
           useMemo
         </Button>
-        <Button colorScheme="teal" size="lg" onClick={() => navigate("/use-callback")}>
+        <Button
+          colorScheme="teal"
+          size="lg"
+          onClick={() => navigate("/use-callback")}
+        >
           useCallback
         </Button>
-        <Button colorScheme="teal" size="lg" onClick={() => navigate("/use-custom-hook")}>
+        <Button
+          colorScheme="teal"
+          size="lg"
+          onClick={() => navigate("/use-custom-hook")}
+        >
           Custom Hook
         </Button>
       </SimpleGrid>

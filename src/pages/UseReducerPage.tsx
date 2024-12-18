@@ -1,5 +1,13 @@
-import { useReducer, useState } from "react";
-import { Box, Heading, Text, Button, Flex, Stack, Input } from "@chakra-ui/react";
+import { useReducer } from "react";
+import {
+  Box,
+  Heading,
+  Text,
+  Button,
+  Flex,
+  Stack,
+  Input,
+} from "@chakra-ui/react";
 
 // ========================== Reducer และ State ==========================
 
@@ -36,10 +44,11 @@ const reducer = (state: State, action: Action): State => {
 
 const UseReducerPage = () => {
   // ใช้ useReducer
-  const [state, dispatch] = useReducer(reducer, { count: 0, input: "", list: [] });
-
-  // เปรียบเทียบกับ useState
-  const [countState, setCountState] = useState(0);
+  const [state, dispatch] = useReducer(reducer, {
+    count: 0,
+    input: "",
+    list: [],
+  });
 
   return (
     <Box
@@ -53,7 +62,7 @@ const UseReducerPage = () => {
       textAlign="center"
     >
       <Heading as="h2" size="lg" color="teal.500" mb={4}>
-        useReducer vs useState
+        useReducer
       </Heading>
 
       {/* ระดับที่ 1: Counter */}
@@ -69,25 +78,16 @@ const UseReducerPage = () => {
           </Box>
         </Text>
         <Flex justify="center" gap={4} mb={4}>
-          <Button colorScheme="teal" onClick={() => dispatch({ type: "increment" })}>
+          <Button
+            colorScheme="teal"
+            onClick={() => dispatch({ type: "increment" })}
+          >
             Increment
           </Button>
-          <Button colorScheme="red" onClick={() => dispatch({ type: "decrement" })}>
-            Decrement
-          </Button>
-        </Flex>
-        {/* useState */}
-        <Text fontSize="2xl" mb={2}>
-          useState Count:{" "}
-          <Box as="span" color="teal.600" fontWeight="bold">
-            {countState}
-          </Box>
-        </Text>
-        <Flex justify="center" gap={4}>
-          <Button colorScheme="blue" onClick={() => setCountState(countState + 1)}>
-            Increment
-          </Button>
-          <Button colorScheme="blue" onClick={() => setCountState(countState - 1)}>
+          <Button
+            colorScheme="red"
+            onClick={() => dispatch({ type: "decrement" })}
+          >
             Decrement
           </Button>
         </Flex>
@@ -102,7 +102,9 @@ const UseReducerPage = () => {
           <Input
             placeholder="Add item"
             value={state.input}
-            onChange={(e) => dispatch({ type: "set_input", payload: e.target.value })}
+            onChange={(e) =>
+              dispatch({ type: "set_input", payload: e.target.value })
+            }
           />
           <Button
             colorScheme="blue"
@@ -126,7 +128,11 @@ const UseReducerPage = () => {
             <Text color="gray.500">No items in the list</Text>
           )}
         </Box>
-        <Button colorScheme="red" mt={4} onClick={() => dispatch({ type: "reset_list" })}>
+        <Button
+          colorScheme="red"
+          mt={4}
+          onClick={() => dispatch({ type: "reset_list" })}
+        >
           Reset List
         </Button>
       </Box>
