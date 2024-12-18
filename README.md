@@ -1,8 +1,11 @@
+### แบบไม่ได้ปรับแต่ง
 npm install react-router-dom
 npm i @chakra-ui/react
 npm install @chakra-ui/react@^2.8.0 @emotion/react@^11.10.6 @emotion/styled@^11.10.6 framer-motion@^6.5.1
 npm install @chakra-ui/icons
 npm install react-syntax-highlighter
+
+### แบบปรับแต่งให้ดูสวยงาม
 
 ## ⚡️ เทคโนโลยีที่ใช้
 
